@@ -1,0 +1,7 @@
+.env
+.venv/
+__pycache__/
+*.pt
+*.safetensors
+*.bin
+model_out/

@@ -1,0 +1,5 @@
+.venv
+.env
+.git
+model_out
+__pycache__

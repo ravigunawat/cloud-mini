@@ -1,0 +1,39 @@
+apiVersion: batch/v1
+kind: Job
+metadata: {name: teacher-shard-0, namespace: pipeline}
+spec:
+  backoffLimit: 20
+  template:
+    spec:
+      restartPolicy: OnFailure
+      containers:
+        - name: worker
+          image: teacher-worker:1
+          imagePullPolicy: Never
+          env:
+            - {name: SHARD_INDEX, value: "0"}
+            - {name: SHARD_COUNT, value: "2"}
+            - {name: OLLAMA_URL, value: "OLLAMA_URL_PLACEHOLDER"}
+            - {name: S3_ENDPOINT, value: "http://seaweedfs.data.svc.cluster.local:8333"}
+          envFrom:
+            - secretRef: {name: s3-credentials}
+---
+apiVersion: batch/v1
+kind: Job
+metadata: {name: teacher-shard-1, namespace: pipeline}
+spec:
+  backoffLimit: 20
+  template:
+    spec:
+      restartPolicy: OnFailure
+      containers:
+        - name: worker
+          image: teacher-worker:1
+          imagePullPolicy: Never
+          env:
+            - {name: SHARD_INDEX, value: "1"}
+            - {name: SHARD_COUNT, value: "2"}
+            - {name: OLLAMA_URL, value: "OLLAMA_URL_PLACEHOLDER"}
+            - {name: S3_ENDPOINT, value: "http://seaweedfs.data.svc.cluster.local:8333"}
+          envFrom:
+            - secretRef: {name: s3-credentials}
