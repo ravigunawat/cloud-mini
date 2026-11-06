@@ -1,0 +1,77 @@
+name: ci
+on:
+  push:
+  workflow_dispatch:
+    inputs:
+      model:
+        description: "Model id to evaluate instead of the Release asset (for example EleutherAI/pythia-70m)"
+        required: false
+        default: ""
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.11"}
+      - run: pip install ruff==0.7.4
+      - run: ruff check worker service training scripts tests
+
+  test:
+    needs: lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.11"}
+      - run: pip install pytest==8.3.3 boto3==1.35.36
+      - run: python -m pytest -q tests
+
+  evaluate:
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.11"}
+      - run: |
+          pip install torch==2.5.1 --index-url https://download.pytorch.org/whl/cpu
+          pip install transformers==4.46.3 numpy==1.26.4
+      - name: Get model (Release asset, or the model given as input)
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if [ -n "${{ github.event.inputs.model }}" ]; then
+            echo "MODEL=${{ github.event.inputs.model }}" >> $GITHUB_ENV
+          else
+            gh release download v1 --pattern model.tar.gz --repo ${{ github.repository }}
+            mkdir model && tar -xzf model.tar.gz -C model
+            echo "MODEL=model" >> $GITHUB_ENV
+          fi
+      - run: |
+          mkdir -p results
+          python scripts/eval_model.py --model "$MODEL" --out results/ci_predictions.jsonl
+          python tools/score.py results/ci_predictions.jsonl data/validation.jsonl --out results/ci_report.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: predictions
+          path: results/ci_predictions.jsonl
+
+  gate:
+    needs: evaluate
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with: {name: predictions}
+      - run: python tools/score.py ci_predictions.jsonl data/validation.jsonl --min-validity 95
+
+  secrets:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - uses: gitleaks/gitleaks-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
