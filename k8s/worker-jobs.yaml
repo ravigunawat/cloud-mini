@@ -10,6 +10,9 @@ spec:
         - name: worker
           image: teacher-worker:1
           imagePullPolicy: Never
+          resources:
+            requests: {memory: 128Mi}
+            limits: {memory: 384Mi}
           env:
             - {name: SHARD_INDEX, value: "0"}
             - {name: SHARD_COUNT, value: "2"}
@@ -30,6 +33,9 @@ spec:
         - name: worker
           image: teacher-worker:1
           imagePullPolicy: Never
+          resources:
+            requests: {memory: 128Mi}
+            limits: {memory: 384Mi}
           env:
             - {name: SHARD_INDEX, value: "1"}
             - {name: SHARD_COUNT, value: "2"}
