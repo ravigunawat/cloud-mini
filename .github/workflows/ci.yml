@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       model:
-        description: "Model id to evaluate instead of the Release asset (for example EleutherAI/pythia-70m)"
+        description: "Model to evaluate instead of the Release asset (for the failing-gate demo: EleutherAI/pythia-70m)"
         required: false
         default: ""
 
@@ -38,16 +38,17 @@ jobs:
       - run: |
           pip install torch==2.5.1 --index-url https://download.pytorch.org/whl/cpu
           pip install transformers==4.46.3 numpy==1.26.4
-      - name: Get model (Release asset, or the model given as input)
+      - name: Get the model (Release asset, or the model given as input)
         env:
           GH_TOKEN: ${{ github.token }}
+          INPUT_MODEL: ${{ github.event.inputs.model }}
         run: |
-          if [ -n "${{ github.event.inputs.model }}" ]; then
-            echo "MODEL=${{ github.event.inputs.model }}" >> $GITHUB_ENV
+          if [ -n "$INPUT_MODEL" ]; then
+            echo "MODEL=$INPUT_MODEL" >> "$GITHUB_ENV"
           else
-            gh release download v1 --pattern model.tar.gz --repo ${{ github.repository }}
+            gh release download v1 --pattern model.tar.gz --repo "${{ github.repository }}"
             mkdir model && tar -xzf model.tar.gz -C model
-            echo "MODEL=model" >> $GITHUB_ENV
+            echo "MODEL=model" >> "$GITHUB_ENV"
           fi
       - run: |
           mkdir -p results
