@@ -1,0 +1,16 @@
+seed: 43
+model_name: EleutherAI/pythia-70m
+learning_rate: 0.0001
+batch_size: 16
+epochs: 4
+max_length: 128
+train_records: 1500
+data_path: train.jsonl
+output_dir: model_out/v2
+loss_csv: training/loss_v2.csv
+library_versions:
+  torch: 2.5.1
+  transformers: 4.46.3
+  numpy: 1.26.4
+  pyyaml: 6.0.2
+  python: "3.12"
