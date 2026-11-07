@@ -14,8 +14,8 @@ seed = cfg["seed"]
 random.seed(seed); np.random.seed(seed); torch.manual_seed(seed)
 torch.set_num_threads(4)
 
-tok = AutoTokenizer.from_pretrained(cfg["model_name"])
-model = AutoModelForCausalLM.from_pretrained(cfg["model_name"])
+tok = AutoTokenizer.from_pretrained(os.environ.get("MODEL_DIR", cfg["model_name"]))
+model = AutoModelForCausalLM.from_pretrained(os.environ.get("MODEL_DIR", cfg["model_name"]))
 eos = tok.eos_token_id
 
 n = args.subset if args.subset > 0 else cfg["train_records"]

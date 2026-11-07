@@ -1,9 +1,9 @@
 {
-  "input": 950,
-  "a": 0,
-  "b": 6,
+  "input": 1050,
+  "a": 1,
+  "b": 8,
   "c": 2,
-  "d": 59,
-  "duplicates": 1,
-  "kept": 882
+  "d": 71,
+  "duplicates": 2,
+  "kept": 966
 }
