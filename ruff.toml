@@ -1,0 +1,5 @@
+line-length = 120
+
+[lint]
+# Compact one-line imports and short loop variables are fine in this project.
+ignore = ["E401", "E701", "E702", "E741"]

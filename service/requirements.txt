@@ -1,4 +1,7 @@
 transformers==4.46.3
+tokenizers==0.20.3
+safetensors==0.8.0
+huggingface-hub==0.36.2
 numpy==1.26.4
 fastapi==0.115.5
 uvicorn==0.32.1
