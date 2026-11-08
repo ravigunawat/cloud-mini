@@ -8,6 +8,7 @@ import boto3
 import torch
 from botocore.config import Config
 from fastapi import FastAPI, Request
+from fastapi.concurrency import run_in_threadpool
 from fastapi.responses import Response
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
@@ -112,7 +113,7 @@ async def parse(request: Request):
             raise ValueError("text must be a string")
     except Exception:
         return JSONResponse({"error": "bad_request"}, status_code=400, headers=headers)
-    raw = generate(text[:500])
+    raw = await run_in_threadpool(generate, text[:500])
     if os.environ.get("FAULT_INJECT", "0") == "1":
         raw = "not json"
     obj = parse_output(raw)
