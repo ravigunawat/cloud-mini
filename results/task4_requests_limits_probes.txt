@@ -1,0 +1,17 @@
+        livenessProbe:
+          failureThreshold: 3
+          httpGet:
+            path: /healthz
+            port: 8000
+--
+        readinessProbe:
+          failureThreshold: 3
+          httpGet:
+            path: /readyz
+            port: 8000
+--
+        resources:
+          limits:
+            cpu: "1"
+            memory: 1Gi
+          requests:

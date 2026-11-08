@@ -1,0 +1,56 @@
+--- t=5s
+parser-6867449b9c-62qnm   0/1   ContainerCreating   0     0s
+parser-6867449b9c-jnlwh   0/1   ContainerCreating   0     0s
+parser   <none>   1s
+--- t=10s
+parser-6867449b9c-62qnm   0/1   Running   0     7s
+parser-6867449b9c-jnlwh   0/1   Running   0     7s
+parser         12s
+--- t=15s
+parser-6867449b9c-62qnm   0/1   Running   0     24s
+parser-6867449b9c-jnlwh   0/1   Running   0     24s
+parser         25s
+--- t=20s
+parser-6867449b9c-62qnm   1/1   Running   0     31s
+parser-6867449b9c-jnlwh   1/1   Running   0     31s
+parser   10.42.0.44:8000,10.42.0.45:8000   31s
+--- t=25s
+parser-6867449b9c-62qnm   1/1   Running   0     36s
+parser-6867449b9c-jnlwh   1/1   Running   0     36s
+parser   10.42.0.44:8000,10.42.0.45:8000   37s
+--- t=30s
+parser-6867449b9c-62qnm   1/1   Running   0     41s
+parser-6867449b9c-jnlwh   1/1   Running   0     41s
+parser   10.42.0.44:8000,10.42.0.45:8000   41s
+--- t=35s
+parser-6867449b9c-62qnm   1/1   Running   0     46s
+parser-6867449b9c-jnlwh   1/1   Running   0     46s
+parser   10.42.0.44:8000,10.42.0.45:8000   47s
+--- t=40s
+parser-6867449b9c-62qnm   1/1   Running   0     53s
+parser-6867449b9c-jnlwh   1/1   Running   0     53s
+parser   10.42.0.44:8000,10.42.0.45:8000   53s
+--- t=45s
+parser-6867449b9c-62qnm   1/1   Running   0     58s
+parser-6867449b9c-jnlwh   1/1   Running   0     58s
+parser   10.42.0.44:8000,10.42.0.45:8000   58s
+--- t=50s
+parser-6867449b9c-62qnm   1/1   Running   0     65s
+parser-6867449b9c-jnlwh   1/1   Running   0     65s
+parser   10.42.0.44:8000,10.42.0.45:8000   65s
+--- t=55s
+parser-6867449b9c-62qnm   1/1   Running   0     70s
+parser-6867449b9c-jnlwh   1/1   Running   0     70s
+parser   10.42.0.44:8000,10.42.0.45:8000   70s
+--- t=60s
+parser-6867449b9c-62qnm   1/1   Running   0     75s
+parser-6867449b9c-jnlwh   1/1   Running   0     75s
+parser   10.42.0.44:8000,10.42.0.45:8000   75s
+--- t=65s
+parser-6867449b9c-62qnm   1/1   Running   0     81s
+parser-6867449b9c-jnlwh   1/1   Running   0     81s
+parser   10.42.0.44:8000,10.42.0.45:8000   81s
+--- t=70s
+parser-6867449b9c-62qnm   1/1   Running   0     86s
+parser-6867449b9c-jnlwh   1/1   Running   0     86s
+parser   10.42.0.44:8000,10.42.0.45:8000   86s
