@@ -1,0 +1,8 @@
+11:09:36 load started, waiting for 2 ready replicas
+11:10:07 before: 2 pods, ready=2
+11:10:08 deleting parser-7997668c76-8wvwv
+pod "parser-7997668c76-8wvwv" deleted from app namespace
+11:10:11 ready=1 pods=3
+11:10:18 ready=1 pods=3
+11:10:26 ready=1 pods=2
+11:13:36 done

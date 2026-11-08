@@ -2,3 +2,4 @@ nohup: ignoring input
 11:05:15 waiting for HPA to scale down to 1
 11:05:16 replicas=1, starting load
 11:09:17 load finished, replicas=2; waiting for scale down to 1
+11:25:20 replicas=2, done

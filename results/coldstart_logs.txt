@@ -1,0 +1,39 @@
+== run 1 pod parser-7997668c76-klwwm
+downloaded s3://models/v1/config.json
+downloaded s3://models/v1/generation_config.json
+INFO:     10.42.0.1:47324 - "GET /readyz HTTP/1.1" 503 Service Unavailable
+downloaded s3://models/v1/model.safetensors
+downloaded s3://models/v1/model.sha256
+downloaded s3://models/v1/special_tokens_map.json
+downloaded s3://models/v1/tokenizer.json
+downloaded s3://models/v1/tokenizer_config.json
+INFO:     10.42.0.1:47338 - "GET /readyz HTTP/1.1" 503 Service Unavailable
+model v1 ready
+INFO:     10.42.0.1:50936 - "GET /readyz HTTP/1.1" 200 OK
+== run 2 pod parser-7997668c76-b6bgp
+downloaded s3://models/v1/config.json
+downloaded s3://models/v1/generation_config.json
+INFO:     10.42.0.1:55128 - "GET /readyz HTTP/1.1" 503 Service Unavailable
+INFO:     10.42.0.1:55144 - "GET /readyz HTTP/1.1" 503 Service Unavailable
+downloaded s3://models/v1/model.safetensors
+downloaded s3://models/v1/model.sha256
+downloaded s3://models/v1/special_tokens_map.json
+downloaded s3://models/v1/tokenizer.json
+downloaded s3://models/v1/tokenizer_config.json
+INFO:     10.42.0.1:36704 - "GET /readyz HTTP/1.1" 503 Service Unavailable
+model v1 ready
+INFO:     10.42.0.1:36714 - "GET /readyz HTTP/1.1" 200 OK
+INFO:     10.42.0.1:37202 - "GET /readyz HTTP/1.1" 200 OK
+== run 3 pod parser-7997668c76-7dfst
+downloaded s3://models/v1/config.json
+downloaded s3://models/v1/generation_config.json
+INFO:     10.42.0.1:53088 - "GET /readyz HTTP/1.1" 503 Service Unavailable
+INFO:     10.42.0.1:53094 - "GET /readyz HTTP/1.1" 503 Service Unavailable
+downloaded s3://models/v1/model.safetensors
+downloaded s3://models/v1/model.sha256
+downloaded s3://models/v1/special_tokens_map.json
+downloaded s3://models/v1/tokenizer.json
+downloaded s3://models/v1/tokenizer_config.json
+INFO:     10.42.0.1:35084 - "GET /readyz HTTP/1.1" 503 Service Unavailable
+model v1 ready
+INFO:     10.42.0.1:35110 - "GET /readyz HTTP/1.1" 200 OK

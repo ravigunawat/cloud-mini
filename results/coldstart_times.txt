@@ -1,0 +1,7 @@
+11:30:16 run 1: deleting all parser pods
+creation->Ready seconds per pod: [17.0, 17.0] max: 17.0
+11:30:38 run 2: deleting all parser pods
+creation->Ready seconds per pod: [22.0, 22.0] max: 22.0
+11:31:05 run 3: deleting all parser pods
+creation->Ready seconds per pod: [22.0, 22.0] max: 22.0
+per-run times: [17.0, 22.0, 22.0] median: 22.0

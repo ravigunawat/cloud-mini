@@ -1,3 +1,2 @@
 NAME                      CPU(cores)   MEMORY(bytes)   
-parser-7465d96954-cb9tz   712m         401Mi           
-parser-7465d96954-jzqtx   862m         433Mi           
+parser-7997668c76-7tww2   999m         437Mi           
