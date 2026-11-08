@@ -29,18 +29,22 @@ done
 kubectl apply -f k8s/seaweedfs.yaml
 kubectl -n data rollout status deploy/seaweedfs --timeout=300s
 
-kubectl -n data port-forward svc/seaweedfs 8333:8333 >/tmp/pf-up.log 2>&1 &
+( while true; do kubectl -n data port-forward svc/seaweedfs 8333:8333 >/tmp/pf-up.log 2>&1; sleep 2; done ) &
 PF_PID=$!
-trap 'kill $PF_PID 2>/dev/null || true' EXIT
-sleep 5
-python3 scripts/init_buckets.py
+trap 'pkill -P $PF_PID 2>/dev/null || true; kill $PF_PID 2>/dev/null || true' EXIT
+ok=0
+for i in $(seq 1 40); do
+  if python3 scripts/init_buckets.py; then ok=1; break; fi
+  echo "waiting for object storage ($i/40)"; sleep 5
+done
+[ "$ok" = 1 ] || { echo "object storage not reachable"; exit 1; }
 
 # Model weights are not in Git. Get them from the GitHub Release if they are not on disk yet.
 REPO_URL=$(git config --get remote.origin.url 2>/dev/null | sed -e 's#\.git$##' -e 's#git@github.com:#https://github.com/#' || true)
 for v in v1 v2; do
   if [ ! -d "model_out/$v" ] && [ -n "$REPO_URL" ]; then
     mkdir -p "model_out/$v"
-    if curl -fsSL -o "/tmp/model-$v.tar.gz" "$REPO_URL/releases/download/$v/model.tar.gz"; then
+    if curl -fsSL --retry 5 --retry-all-errors --retry-delay 5 -o "/tmp/model-$v.tar.gz" "$REPO_URL/releases/download/$v/model.tar.gz"; then
       tar -xzf "/tmp/model-$v.tar.gz" -C "model_out/$v"
     else
       rmdir "model_out/$v" 2>/dev/null || true
