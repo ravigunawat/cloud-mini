@@ -1,0 +1,34 @@
+buckets: ['datasets', 'models']
+datasets/commands_pool.jsonl  197541 bytes
+datasets/teacher/shard-0.jsonl  263495 bytes
+datasets/teacher/shard-1.jsonl  263379 bytes
+datasets/v1/train.jsonl  481149 bytes
+datasets/v1/train.sha256  78 bytes
+models/v1/config.json  806 bytes
+models/v1/generation_config.json  111 bytes
+models/v1/model.safetensors  281715176 bytes
+models/v1/model.sha256  79 bytes
+models/v1/special_tokens_map.json  441 bytes
+models/v1/tokenizer.json  3564303 bytes
+models/v1/tokenizer_config.json  4835 bytes
+models/v2/config.json  806 bytes
+models/v2/generation_config.json  111 bytes
+models/v2/model.safetensors  281715176 bytes
+models/v2/model.sha256  79 bytes
+models/v2/special_tokens_map.json  441 bytes
+models/v2/tokenizer.json  3564303 bytes
+models/v2/tokenizer_config.json  4835 bytes
+sha256 in object storage: fd5bba3d3313ac44b1603b0012922c799f109ee731ce4056eae849dec2fc2819  train.jsonl
+fd5bba3d3313ac44b1603b0012922c799f109ee731ce4056eae849dec2fc2819  train.jsonl
+app               Active   47h
+data              Active   47h
+pipeline          Active   47h
+NAME                         READY   STATUS    RESTARTS      AGE
+seaweedfs-679f66647c-4zhzd   1/1     Running   4 (29h ago)   47h
+NAME                        STATUS     COMPLETIONS   DURATION   AGE
+job.batch/teacher-shard-0   Complete   1/1           12h        28h
+job.batch/teacher-shard-1   Complete   1/1           12h        28h
+
+NAME                        READY   STATUS      RESTARTS   AGE
+pod/teacher-shard-0-hhcw6   0/1     Completed   0          28h
+pod/teacher-shard-1-zll57   0/1     Completed   0          28h

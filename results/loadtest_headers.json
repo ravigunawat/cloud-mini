@@ -1,9 +1,9 @@
 {
   "per_replica": {
-    "parser-7997668c76-7tww2": 268,
-    "parser-7997668c76-zhmgd": 129
+    "parser-7997668c76-pgxgh": 259,
+    "parser-7997668c76-7dfst": 260
   },
   "per_model_version": {
-    "v1": 397
+    "v1": 519
   }
 }

@@ -1,0 +1,25 @@
+nohup:  replicas= ready=
+06:23:04 0%/70% replicas=2 ready=2/2
+06:24:17 <unknown>/70% replicas=2 ready=1/2
+06:24:37 <unknown>/70% replicas=2 ready=2/2
+06:25:20 <unknown>/70% replicas=2 ready=1/2
+06:25:30 <unknown>/70% replicas=2 ready=2/2
+06:28:51 <unknown>/70% replicas=2 ready=1/2
+06:29:22 <unknown>/70% replicas=2 ready=2/2
+06:32:57 1%/70% replicas=2 ready=1/1
+06:33:07 0%/70% replicas=1 ready=1/1
+11:05:56 161%/70% replicas=1 ready=1/2
+11:06:06 161%/70% replicas=2 ready=1/2
+11:06:17 161%/70% replicas=2 ready=2/2
+11:10:08 190%/70% replicas=2 ready=1/2
+11:10:31 193%/70% replicas=2 ready=2/2
+11:27:58 0%/70% replicas=2 ready=1/1
+11:28:09 0%/70% replicas=1 ready=1/1
+11:28:41 178%/70% replicas=1 ready=1/2
+11:28:53 199%/70% replicas=2 ready=2/2
+11:30:22 <unknown>/70% replicas=2 ready=0/2
+11:31:04 <unknown>/70% replicas=2 ready=2/2
+11:31:15 <unknown>/70% replicas=2 ready=0/2
+11:31:32 <unknown>/70% replicas=2 ready=2/2
+5h20m  replicas= ready=
+11:38:15 0%/70% replicas=2 ready=2/2
