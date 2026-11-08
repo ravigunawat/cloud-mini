@@ -1,0 +1,12 @@
+downloaded s3://models/v1/config.json
+downloaded s3://models/v1/generation_config.json
+INFO:     172.17.0.1:39728 - "GET /readyz HTTP/1.1" 503 Service Unavailable
+INFO:     172.17.0.1:39736 - "GET /readyz HTTP/1.1" 503 Service Unavailable
+downloaded s3://models/v1/model.safetensors
+downloaded s3://models/v1/model.sha256
+downloaded s3://models/v1/special_tokens_map.json
+downloaded s3://models/v1/tokenizer.json
+downloaded s3://models/v1/tokenizer_config.json
+INFO:     172.17.0.1:39740 - "GET /readyz HTTP/1.1" 503 Service Unavailable
+model v1 ready
+INFO:     172.17.0.1:55828 - "GET /readyz HTTP/1.1" 200 OK

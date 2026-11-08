@@ -1,0 +1,9 @@
+HTTP/1.1 500 Internal Server Error
+date: Sun, 08 Nov 2026 06:15:15 GMT
+server: uvicorn
+x-model-version: v1
+x-served-by: 48d08fa8094b
+content-length: 33
+content-type: application/json
+
+{"error": "invalid_model_output"}

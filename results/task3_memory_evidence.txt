@@ -1,0 +1,8 @@
+== limits (NanoCpus, Memory bytes)
+1000000000 1073741824
+== OOMKilled
+false
+== peak memory bytes (cgroup)
+777760768
+== docker stats now
+parser-test 470.9MiB / 1GiB 0.13%

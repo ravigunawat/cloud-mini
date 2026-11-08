@@ -1,0 +1,411 @@
+{
+ "summary": {
+  "requests": 50,
+  "http_200": 50,
+  "failed": 0,
+  "median_s": 0.4485,
+  "max_s": 3.623
+ },
+ "rows": [
+  {
+   "text": "remove the upcoming calendar event",
+   "status": 200,
+   "seconds": 3.623,
+   "served_by": "aad2fecdf4c3",
+   "version": "v1",
+   "body": "{\"intent\": \"calendar_remove\", \"date\": \"upcoming\", \"time\": null, \"place\": null}"
+  },
+  {
+   "text": "need an alarm set for sunday at five in the morning",
+   "status": 200,
+   "seconds": 0.529,
+   "served_by": "aad2fecdf4c3",
+   "version": "v1",
+   "body": "{\"intent\": \"alarm_set\", \"date\": \"sunday\", \"time\": \"five\", \"place\": null}"
+  },
+  {
+   "text": "give me the time at washington right now",
+   "status": 200,
+   "seconds": 0.551,
+   "served_by": "aad2fecdf4c3",
+   "version": "v1",
+   "body": "{\"intent\": \"datetime_query\", \"date\": null, \"time\": \"morning\", \"place\": \"washington\"}"
+  },
+  {
+   "text": "what time does mondays meeting start",
+   "status": 200,
+   "seconds": 0.41,
+   "served_by": "aad2fecdf4c3",
+   "version": "v1",
+   "body": "{\"intent\": \"calendar_query\", \"date\": null, \"time\": null, \"place\": null}"
+  },
+  {
+   "text": "set my alarm for tuesday at six pm",
+   "status": 200,
+   "seconds": 0.564,
+   "served_by": "aad2fecdf4c3",
+   "version": "v1",
+   "body": "{\"intent\": \"alarm_set\", \"date\": \"tuesday\", \"time\": \"six pm\", \"place\": null}"
+  },
+  {
+   "text": "remind me about my meeting this afternoon please",
+   "status": 200,
+   "seconds": 0.528,
+   "served_by": "aad2fecdf4c3",
+   "version": "v1",
+   "body": "{\"intent\": \"calendar_set\", \"date\": \"this afternoon\", \"time\": null, \"place\": null}"
+  },
+  {
+   "text": "what day of the week is november fourteenth",
+   "status": 200,
+   "seconds": 0.509,
+   "served_by": "aad2fecdf4c3",
+   "version": "v1",
+   "body": "{\"intent\": \"datetime_query\", \"date\": \"oneteenth\", \"time\": null, \"place\": null}"
+  },
+  {
+   "text": "do i have any appointments this weekend",
+   "status": 200,
+   "seconds": 0.436,
+   "served_by": "aad2fecdf4c3",
+   "version": "v1",
+   "body": "{\"intent\": \"calendar_query\", \"date\": \"this weekend\", \"time\": null, \"place\": null}"
+  },
+  {
+   "text": "what time is it in the central time zone",
+   "status": 200,
+   "seconds": 0.474,
+   "served_by": "aad2fecdf4c3",
+   "version": "v1",
+   "body": "{\"intent\": \"datetime_query\", \"date\": null, \"time\": \"central\", \"place\": null}"
+  },
+  {
+   "text": "when is dale's birthday",
+   "status": 200,
+   "seconds": 0.483,
+   "served_by": "aad2fecdf4c3",
+   "version": "v1",
+   "body": "{\"intent\": \"calendar_query\", \"date\": \"dossday\", \"time\": null, \"place\": null}"
+  },
+  {
+   "text": "how's the weather going to be this week",
+   "status": 200,
+   "seconds": 0.439,
+   "served_by": "aad2fecdf4c3",
+   "version": "v1",
+   "body": "{\"intent\": \"weather_query\", \"date\": \"this week\", \"time\": null, \"place\": null}"
+  },
+  {
+   "text": "give me the time in pst",
+   "status": 200,
+   "seconds": 0.44,
+   "served_by": "aad2fecdf4c3",
+   "version": "v1",
+   "body": "{\"intent\": \"datetime_query\", \"date\": null, \"time\": null, \"place\": \"pst\"}"
+  },
+  {
+   "text": "any activity in the area",
+   "status": 200,
+   "seconds": 0.422,
+   "served_by": "aad2fecdf4c3",
+   "version": "v1",
+   "body": "{\"intent\": \"calendar_query\", \"date\": null, \"time\": null, \"place\": \"area\"}"
+  },
+  {
+   "text": "read my next reminders for this afternoon",
+   "status": 200,
+   "seconds": 0.45,
+   "served_by": "aad2fecdf4c3",
+   "version": "v1",
+   "body": "{\"intent\": \"calendar_query\", \"date\": \"tonight\", \"time\": null, \"place\": null}"
+  },
+  {
+   "text": "delete my whole calendar for today",
+   "status": 200,
+   "seconds": 0.4,
+   "served_by": "aad2fecdf4c3",
+   "version": "v1",
+   "body": "{\"intent\": \"calendar_remove\", \"date\": \"today\", \"time\": null, \"place\": null}"
+  },
+  {
+   "text": "format data from calendar",
+   "status": 200,
+   "seconds": 0.379,
+   "served_by": "aad2fecdf4c3",
+   "version": "v1",
+   "body": "{\"intent\": \"calendar_set\", \"date\": null, \"time\": null, \"place\": null}"
+  },
+  {
+   "text": "wake me up at this time",
+   "status": 200,
+   "seconds": 0.469,
+   "served_by": "aad2fecdf4c3",
+   "version": "v1",
+   "body": "{\"intent\": \"alarm_set\", \"date\": \"this time\", \"time\": null, \"place\": null}"
+  },
+  {
+   "text": "remind me of my sister's birthday party tomorrow an hour before it starts",
+   "status": 200,
+   "seconds": 0.503,
+   "served_by": "aad2fecdf4c3",
+   "version": "v1",
+   "body": "{\"intent\": \"calendar_set\", \"date\": \"tomorrow\", \"time\": \"day\", \"place\": \"daughter's birthday\"}"
+  },
+  {
+   "text": "what time is the next event scheduled",
+   "status": 200,
+   "seconds": 0.437,
+   "served_by": "aad2fecdf4c3",
+   "version": "v1",
+   "body": "{\"intent\": \"calendar_query\", \"date\": null, \"time\": null, \"place\": null}"
+  },
+  {
+   "text": "alexa state the weather in our city",
+   "status": 200,
+   "seconds": 0.521,
+   "served_by": "aad2fecdf4c3",
+   "version": "v1",
+   "body": "{\"intent\": \"weather_query\", \"date\": null, \"time\": null, \"place\": \"our city\"}"
+  },
+  {
+   "text": "what's going on around me",
+   "status": 200,
+   "seconds": 0.475,
+   "served_by": "aad2fecdf4c3",
+   "version": "v1",
+   "body": "{\"intent\": \"calendar_query\", \"date\": null, \"time\": null, \"place\": \"meeting\"}"
+  },
+  {
+   "text": "remind me for making call to all participants",
+   "status": 200,
+   "seconds": 0.451,
+   "served_by": "aad2fecdf4c3",
+   "version": "v1",
+   "body": "{\"intent\": \"calendar_set\", \"date\": null, \"time\": null, \"place\": \"all participants\"}"
+  },
+  {
+   "text": "set bob's birthday for every june third",
+   "status": 200,
+   "seconds": 0.447,
+   "served_by": "aad2fecdf4c3",
+   "version": "v1",
+   "body": "{\"intent\": \"calendar_set\", \"date\": \"every june third\", \"time\": null, \"place\": null}"
+  },
+  {
+   "text": "what date is justin's school play",
+   "status": 200,
+   "seconds": 0.398,
+   "served_by": "aad2fecdf4c3",
+   "version": "v1",
+   "body": "{\"intent\": \"datetime_query\", \"date\": null, \"time\": null, \"place\": \"school\"}"
+  },
+  {
+   "text": "what time is it now in new york",
+   "status": 200,
+   "seconds": 0.425,
+   "served_by": "aad2fecdf4c3",
+   "version": "v1",
+   "body": "{\"intent\": \"datetime_query\", \"date\": null, \"time\": null, \"place\": \"new york\"}"
+  },
+  {
+   "text": "what is the five days forecast looking like in new york city",
+   "status": 200,
+   "seconds": 0.503,
+   "served_by": "aad2fecdf4c3",
+   "version": "v1",
+   "body": "{\"intent\": \"weather_query\", \"date\": \"five days\", \"time\": null, \"place\": \"new york city\"}"
+  },
+  {
+   "text": "what meetings are on my calendar today",
+   "status": 200,
+   "seconds": 0.381,
+   "served_by": "aad2fecdf4c3",
+   "version": "v1",
+   "body": "{\"intent\": \"calendar_query\", \"date\": \"today\", \"time\": null, \"place\": null}"
+  },
+  {
+   "text": "what is the weather at home",
+   "status": 200,
+   "seconds": 0.383,
+   "served_by": "aad2fecdf4c3",
+   "version": "v1",
+   "body": "{\"intent\": \"weather_query\", \"date\": null, \"time\": null, \"place\": \"home\"}"
+  },
+  {
+   "text": "what alarms are on right now",
+   "status": 200,
+   "seconds": 0.409,
+   "served_by": "aad2fecdf4c3",
+   "version": "v1",
+   "body": "{\"intent\": \"alarm_query\", \"date\": \"tonight\", \"time\": null, \"place\": null}"
+  },
+  {
+   "text": "set alarm at ten am",
+   "status": 200,
+   "seconds": 0.451,
+   "served_by": "aad2fecdf4c3",
+   "version": "v1",
+   "body": "{\"intent\": \"alarm_set\", \"date\": null, \"time\": \"ten am\", \"place\": null}"
+  },
+  {
+   "text": "fun things to do today",
+   "status": 200,
+   "seconds": 0.441,
+   "served_by": "aad2fecdf4c3",
+   "version": "v1",
+   "body": "{\"intent\": \"calendar_query\", \"date\": \"today\", \"time\": null, \"place\": null}"
+  },
+  {
+   "text": "how many days are left in this year",
+   "status": 200,
+   "seconds": 0.506,
+   "served_by": "aad2fecdf4c3",
+   "version": "v1",
+   "body": "{\"intent\": \"datetime_query\", \"date\": \"this year\", \"time\": null, \"place\": null}"
+  },
+  {
+   "text": "set an eight hundred am alarm for next tuesday",
+   "status": 200,
+   "seconds": 0.548,
+   "served_by": "aad2fecdf4c3",
+   "version": "v1",
+   "body": "{\"intent\": \"alarm_set\", \"date\": \"next tuesday\", \"time\": \"eight hundred am\", \"place\": null}"
+  },
+  {
+   "text": "do i have any new tinder matches",
+   "status": 200,
+   "seconds": 0.416,
+   "served_by": "aad2fecdf4c3",
+   "version": "v1",
+   "body": "{\"intent\": \"recommendation_events\", \"date\": null, \"time\": null, \"place\": null}"
+  },
+  {
+   "text": "remind me about my alarms today",
+   "status": 200,
+   "seconds": 0.405,
+   "served_by": "aad2fecdf4c3",
+   "version": "v1",
+   "body": "{\"intent\": \"alarm_set\", \"date\": \"today\", \"time\": null, \"place\": null}"
+  },
+  {
+   "text": "is my alarm set for seven am",
+   "status": 200,
+   "seconds": 0.437,
+   "served_by": "aad2fecdf4c3",
+   "version": "v1",
+   "body": "{\"intent\": \"alarm_query\", \"date\": null, \"time\": \"seven am\", \"place\": null}"
+  },
+  {
+   "text": "remind me about the office meeting tomorrow at seven",
+   "status": 200,
+   "seconds": 0.485,
+   "served_by": "aad2fecdf4c3",
+   "version": "v1",
+   "body": "{\"intent\": \"calendar_set\", \"date\": \"tomorrow\", \"time\": \"seven\", \"place\": \"entistoss\"}"
+  },
+  {
+   "text": "can you set the event for monday at six at mcdonalds",
+   "status": 200,
+   "seconds": 0.528,
+   "served_by": "aad2fecdf4c3",
+   "version": "v1",
+   "body": "{\"intent\": \"calendar_set\", \"date\": \"mondember\", \"time\": \"six\", \"place\": \"mondember\"}"
+  },
+  {
+   "text": "i am no longer going to wyatts birthday party",
+   "status": 200,
+   "seconds": 0.454,
+   "served_by": "aad2fecdf4c3",
+   "version": "v1",
+   "body": "{\"intent\": \"calendar_query\", \"date\": null, \"time\": null, \"place\": \"wyatts\"}"
+  },
+  {
+   "text": "set an alarm in an hour's time",
+   "status": 200,
+   "seconds": 0.402,
+   "served_by": "aad2fecdf4c3",
+   "version": "v1",
+   "body": "{\"intent\": \"alarm_set\", \"date\": null, \"time\": \"an hour\", \"place\": null}"
+  },
+  {
+   "text": "olly what time is it in california",
+   "status": 200,
+   "seconds": 0.379,
+   "served_by": "aad2fecdf4c3",
+   "version": "v1",
+   "body": "{\"intent\": \"datetime_query\", \"date\": null, \"time\": null, \"place\": \"california\"}"
+  },
+  {
+   "text": "what time is it in beijing",
+   "status": 200,
+   "seconds": 0.375,
+   "served_by": "aad2fecdf4c3",
+   "version": "v1",
+   "body": "{\"intent\": \"datetime_query\", \"date\": null, \"time\": null, \"place\": \"beijing\"}"
+  },
+  {
+   "text": "list my different alarm",
+   "status": 200,
+   "seconds": 0.437,
+   "served_by": "aad2fecdf4c3",
+   "version": "v1",
+   "body": "{\"intent\": \"alarm_query\", \"date\": null, \"time\": null, \"place\": null}"
+  },
+  {
+   "text": "what day is the fifteenth",
+   "status": 200,
+   "seconds": 0.392,
+   "served_by": "aad2fecdf4c3",
+   "version": "v1",
+   "body": "{\"intent\": \"datetime_query\", \"date\": \"fifteenth\", \"time\": null, \"place\": null}"
+  },
+  {
+   "text": "set an alarm for next tuesdays meeting",
+   "status": 200,
+   "seconds": 0.441,
+   "served_by": "aad2fecdf4c3",
+   "version": "v1",
+   "body": "{\"intent\": \"alarm_set\", \"date\": \"next tuesday\", \"time\": null, \"place\": null}"
+  },
+  {
+   "text": "who will be attending the meeting this friday",
+   "status": 200,
+   "seconds": 0.483,
+   "served_by": "aad2fecdf4c3",
+   "version": "v1",
+   "body": "{\"intent\": \"calendar_query\", \"date\": \"friday\", \"time\": null, \"place\": null}"
+  },
+  {
+   "text": "what are the show timings",
+   "status": 200,
+   "seconds": 0.46,
+   "served_by": "aad2fecdf4c3",
+   "version": "v1",
+   "body": "{\"intent\": \"datetime_query\", \"date\": null, \"time\": null, \"place\": null}"
+  },
+  {
+   "text": "remove my event at one pm in my calendar",
+   "status": 200,
+   "seconds": 0.434,
+   "served_by": "aad2fecdf4c3",
+   "version": "v1",
+   "body": "{\"intent\": \"calendar_remove\", \"date\": null, \"time\": \"one pm\", \"place\": null}"
+  },
+  {
+   "text": "what is the address for the event scheduled on the first of january alexa",
+   "status": 200,
+   "seconds": 0.541,
+   "served_by": "aad2fecdf4c3",
+   "version": "v1",
+   "body": "{\"intent\": \"calendar_query\", \"date\": \"the first of january\", \"time\": null, \"place\": \"alexa\"}"
+  },
+  {
+   "text": "add on my calendar for today joe smith at one pm",
+   "status": 200,
+   "seconds": 0.555,
+   "served_by": "aad2fecdf4c3",
+   "version": "v1",
+   "body": "{\"intent\": \"calendar_set\", \"date\": \"today\", \"time\": \"one pm\", \"place\": \"mondoon\"}"
+  }
+ ]
+}
