@@ -1,0 +1,7 @@
+python training/train.py --config training/config_v2.yaml
+training on 1500 records
+epoch 1 loss 0.3870
+epoch 2 loss 0.1393
+epoch 3 loss 0.0979
+epoch 4 loss 0.0678
+saved to model_out/v2

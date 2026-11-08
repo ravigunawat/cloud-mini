@@ -5,3 +5,5 @@ __pycache__/
 *.safetensors
 *.bin
 model_out/
+release/
+model.tar.gz

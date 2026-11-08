@@ -24,6 +24,3 @@ down:
 
 train-v2:
 > python training/train.py --config training/config_v2.yaml
-
-train-v2:
-> python training/train.py --config training/config_v2.yaml
